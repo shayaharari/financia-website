@@ -92,7 +92,7 @@ const initialForm = {
   consent: false,
 };
 
-function calculateRisk(form) {
+function calculateRisk(form: any) {
   const income = incomeRanges.find((x) => x.label === form.monthlyIncome)?.value || 0;
   const debt = debtRanges.find((x) => x.label === form.monthlyDebt)?.value || 0;
   const loan = Number(form.loanAmount || 0);
